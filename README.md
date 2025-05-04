@@ -101,11 +101,11 @@ Remember that the switches were configured as pulldowns, so high voltage = open,
 
 ![](PUSH-MOMENTARY-KPB22-8000-F10-324-JQ-NO_rising.png)
 
-#### N/C falling edge (switch opening)
+#### N/C falling edge (switch closing)
 
 ![](PUSH-MOMENTARY-KPB22-8000-F10-324-JQ-NC_falling.png)
 
-#### N/C rising edge (switch closing)
+#### N/C rising edge (switch opening)
 
 ![](PUSH-MOMENTARY-KPB22-8000-F10-324-JQ-NC_rising.png)
 
