@@ -119,6 +119,16 @@ Remember that the switches were configured as pulldowns, so high voltage = open,
 
 ![](MOMENTARY-KEYSWITCH-IRL-5-M-D-2_rising.png)
 
+## PWL data
+
+PWL files are available to download under this repository's releases section. These PWL files contain switch resistance values over time, assuming an off-resistance of 100MΩ and an on-resistance of 1mΩ. These allow you to accurately simulate the behaviour of the switch during bouncing, beyond just a simple on/off state.
+
+Here is an example of the PWL data being used in LTSpice:
+
+![](ltspice_example.png)
+
+The PWL file is loaded into a voltage source, and the output of that voltage source is labelled as `Vres` (you can pick any name). A resistor is added to the circuit and its resistance parameter is set to `R={V(Vres)}`, matching the voltage source label. This resistor acts like the switch. The rest of the circuit shown is part of a test simulation for hardware debouncing - the voltage source (V3) and resistor (R3) are all you need.
+
 ## Raw data
 
 The raw data is available to download under this repository's releases section. The data is formatted as a CSV with a header, with each device in its own directory. For double-throw devices that have both normally-open and normally-closed forms, the device will have two directories suffixed with `-NO` and `-NC` respectively.
